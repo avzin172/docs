@@ -9,8 +9,8 @@
   ```bash
   SHARD_ITERATOR=$(aws kinesis get-shard-iterator \
     --endpoint <endpoint> \
-    --shard-id shard-000001 \ 
-    --shard-iterator-type LATEST \ 
+    --shard-id shard-000001 \
+    --shard-iterator-type LATEST \
     --stream-name <stream_ID> \
     --query 'ShardIterator'| tr -d \")
   aws kinesis get-records \
@@ -32,12 +32,12 @@
 
   ```bash
   SHARD_ITERATOR=$(aws kinesis get-shard-iterator \
-    --endpoint https://yds.serverless.yandexcloud.net \ 
+    --endpoint https://yds.serverless.yandexcloud.net \
     --shard-id shard-000001 \
-    --shard-iterator-type LATEST \ 
-    --stream-name /ru-central1/aoeu1kuk2dhtaupdb1es/cc8029jgtuabequtgtbv/aws_stream 
+    --shard-iterator-type LATEST \
+    --stream-name /ru-central1/aoeu1kuk2dhtaupdb1es/cc8029jgtuabequtgtbv/aws_stream \
     --query 'ShardIterator'| tr -d \")
-  aws kinesis get-records \ 
+  aws kinesis get-records \
     --endpoint https://yds.serverless.yandexcloud.net \
     --shard-iterator $SHARD_ITERATOR
   ```

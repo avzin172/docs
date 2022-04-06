@@ -93,7 +93,7 @@ When restoring to the current state, the new cluster will reflect the state of:
            --environment <environment, PRESTABLE or PRODUCTION> \
            --network-name <network name> \
            --host zone-id=<availability zone>,subnet-id=<subnet ID> \
-           --mongod-resource-preset <host class> \     
+           --mongod-resource-preset <host class> \
            --mongod-disk-size <storage size in GB> \
            --mongod-disk-type <storage type: network-hdd, network-ssd, or local-ssd>
      ```
@@ -250,7 +250,7 @@ Let's say we need to create a new {{ MG }} cluster from a backup with the follow
            --environment PRODUCTION \
            --network-name {{ network-name }} \
            --host {{ host-net-example }} \
-           --mongod-resource-preset {{ host-class }} \ 
+           --mongod-resource-preset {{ host-class }} \
            --mongod-disk-size 20 \
            --mongod-disk-type {{ disk-type-example }}
   ```
